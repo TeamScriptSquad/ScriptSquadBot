@@ -115,7 +115,7 @@ def callback_message(callback):
             del user_states[callback.from_user.id]  # Удаляем состояние пользователя
 
             # Отправляем уведомление менеджеру
-            manager_chat_id = 8101018025  # Замените на реальный chat_id менеджера
+            manager_chat_id = -1002293114929  # Замените на реальный chat_id менеджера
             bot.send_message(
                 manager_chat_id,
                 f'Новая заявка на услугу: {service}\n'
@@ -154,7 +154,7 @@ def handle_text(message):
         )
         try:
             bot.send_message(
-                8101018025,  # Замените на реальный chat_id менеджера
+                -1002293114929,  # Замените на реальный chat_id менеджера
                 f'📩 Новая заявка на услугу:\n\n'
                 f'<b>Услуга:</b> {service}\n'
                 f'<b>Пользователь:</b> @{message.from_user.username or message.from_user.first_name}\n'
@@ -180,3 +180,4 @@ def handle_text(message):
 
 
 bot.infinity_polling()
+
